@@ -1,6 +1,6 @@
 "use client";
 
-import { SetStateAction, Dispatch, useState, useEffect } from "react";
+import { SetStateAction, Dispatch, useState } from "react";
 
 import type { AppList } from "../Types/AppList";
 import type { GroupMemberList } from "../Types/GroupMemberList";
@@ -62,7 +62,7 @@ export default function Share({
         }}
       ></Script>
       <div
-        className={`absolute z-50 w-full bottom-0 flex flex-col h-2/3 transition-transform duration-500 ease-in-out transform ${
+        className={`absolute z-50 left-0 w-full bottom-0 flex flex-col h-2/3 transition-transform duration-500 ease-in-out transform ${
           isOpenShare ? "-translate-y-0" : "translate-y-full"
         }`}
       >
@@ -74,7 +74,7 @@ export default function Share({
             <CloseIcon></CloseIcon>
           </button>
         </div>
-        <div className="bg-white w-full h-full p-6 rounded-t-[20px] shadow-inner">
+        <div className="bg-white w-full h-full bottom-0 p-6 rounded-t-[20px] shadow-inner">
           <div className="flex justify-center">
             <div className="font-bold">공유하기</div>
           </div>

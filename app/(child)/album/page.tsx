@@ -21,7 +21,7 @@ export default function AlbumPage() {
   const [isDiaryOpen, setIsDiaryOpen] = useState<boolean>(false);
 
   return (
-    <div className="relative flex items-center justify-center w-[375px] h-[812px] mr-1 overflow-hidden">
+    <div className="relative flex items-center justify-center w-[375px] h-full mr-1 overflow-hidden">
       <div className={`${isDiaryOpen ? "hidden" : ""}`}>
         <Main
           diariesData={diariesData}
@@ -33,7 +33,7 @@ export default function AlbumPage() {
       </div>
 
       {isDiaryOpen && (
-        <div className="mb-12">
+        <div className="mb-24">
           <Diary
             diariesData={diariesData}
             setDiariesData={setDiariesData}

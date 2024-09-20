@@ -56,8 +56,6 @@ export default function Diary({
       setIsSwiping(false);
 
       if (deg <= -10) {
-        console.log("다음 데이터");
-
         if (diaryIdx === diariesData.length - 1) {
           setDiaryIdx(diariesData.length - 1);
         } else {
@@ -66,8 +64,6 @@ export default function Diary({
       }
 
       if (deg >= 10) {
-        console.log("이전 데이터");
-
         if (diaryIdx === 0) {
           setDiaryIdx(0);
         } else {
