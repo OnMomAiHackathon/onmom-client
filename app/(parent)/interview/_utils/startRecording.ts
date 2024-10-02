@@ -1,4 +1,4 @@
-import { DiaryData } from "@/app/(child)/album/Types/DiaryData";
+import { DiaryData } from "@/app/(child)/album/types/DiaryData";
 
 export const startRecording = async (
   setData: React.Dispatch<React.SetStateAction<DiaryData>>,

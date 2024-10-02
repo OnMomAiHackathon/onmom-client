@@ -1,10 +1,10 @@
 import { Dispatch, SetStateAction } from "react";
 
-import type { DiaryData } from "../Types/DiaryData";
+import type { DiaryData } from "../../types/DiaryData";
 
-import DiaryCalendar from "./Main/DiaryCalendar";
-import MemberGreeting from "./Main/MemberGreeting";
-import UserInterest from "./Main/UserInterest";
+import CalendarContainer from "./CalendarContainer";
+import MemberGreeting from "./MemberGreeting";
+import UserInterest from "./UserInterest";
 
 interface DiaryCalendarProps {
   setIsDiaryOpen: Dispatch<SetStateAction<boolean>>;
@@ -26,7 +26,7 @@ export default function Main({
   return (
     <div className="mt-5">
       <MemberGreeting />
-      <DiaryCalendar
+      <CalendarContainer
         diaryIdx={diaryIdx}
         setDiaryIdx={setDiaryIdx}
         diariesData={diariesData}

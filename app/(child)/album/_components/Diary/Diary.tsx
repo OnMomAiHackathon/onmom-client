@@ -4,15 +4,14 @@ import { useState, Dispatch, SetStateAction, useEffect, useRef } from "react";
 import html2canvas from "html2canvas";
 import { useSwipeable } from "react-swipeable";
 
-import type { DiaryData } from "../Types/DiaryData";
+import type { DiaryData } from "../../types/DiaryData";
 
 import ShareIcon from "@/public/icons/icon-share-white.svg";
-import DiaryCard from "./Diary/DiaryCard";
-import PlayButton from "./Diary/PlayButton";
+import DiaryCard from "./DiaryCard";
+import PlayButton from "./PlayButton";
 
 interface DiaryProps {
   diariesData: DiaryData[];
-  setDiariesData: Dispatch<SetStateAction<DiaryData[]>>;
   diaryIdx: number;
   setDiaryIdx: Dispatch<SetStateAction<number>>;
 }
@@ -24,16 +23,13 @@ interface ShareProps {
 }
 
 interface CaptureDataProps {
-  captureData: string;
   setCaptureData: Dispatch<SetStateAction<string>>;
 }
 
 export default function Diary({
   diariesData,
-  setDiariesData,
   diaryIdx,
   setDiaryIdx,
-  captureData,
   setCaptureData,
   isOpenShare,
   setIsOpenShare,

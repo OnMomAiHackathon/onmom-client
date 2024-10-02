@@ -1,4 +1,4 @@
-import { DiaryData } from "../Types/DiaryData";
+import { DiaryData } from "../types/DiaryData";
 
 export const initialDiaryData: DiaryData[] = [
   {

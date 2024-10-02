@@ -11,7 +11,7 @@ import { buttonVariants } from "@/components/ui/button";
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   markedDates?: Date[];
 };
-function Calendar({
+export default function Calendar({
   className,
   classNames,
   showOutsideDays = true,
@@ -95,5 +95,3 @@ function Calendar({
   );
 }
 Calendar.displayName = "Calendar";
-
-export { Calendar };

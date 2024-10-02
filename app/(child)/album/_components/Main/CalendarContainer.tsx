@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState, Dispatch, SetStateAction } from "react";
-import { Calendar } from "@/components/ui/calendar";
-import { DiaryData } from "../../Types/DiaryData";
-import { getLoginUser, setLoginUser } from "@/app/_utils/loginUserInfo";
+import { DiaryData } from "../../types/DiaryData";
+import { getLoginUser } from "@/app/_utils/loginUserInfo";
 import { getGroupId } from "@/app/_utils/groupId";
 
-interface DiaryCalendarProps {
+import Calendar from "./Calendar";
+
+interface CalendarContainerProps {
   setIsDiaryOpen: Dispatch<SetStateAction<boolean>>;
 }
 interface DiaryProps {
@@ -16,13 +17,11 @@ interface DiaryProps {
   setDiaryIdx: Dispatch<SetStateAction<number>>;
 }
 
-export default function DiaryCalendar({
+export default function CalendarContainer({
   setIsDiaryOpen,
-  diariesData,
   setDiariesData,
-  diaryIdx,
   setDiaryIdx,
-}: DiaryCalendarProps & DiaryProps) {
+}: CalendarContainerProps & DiaryProps) {
   const [diariesDate, setDiariesDate] = useState<Date[]>([
     new Date(
       `${new Date("2024-09-01").getFullYear()}-${
@@ -42,7 +41,7 @@ export default function DiaryCalendar({
     selected ? selected.getDate() : new Date().getDate()
   );
   const [userId, setUserId] = useState<number>(0);
-  const [groupId, setGroupId] = useState<string>("23");
+  const [groupId, setGroupId] = useState<string>("");
 
   const fetchData = async (
     year: number,

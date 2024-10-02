@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 
-import type { DiaryData } from "./Types/DiaryData";
+import type { DiaryData } from "./types/DiaryData";
 
-import Diary from "./_components/Diary";
+import Diary from "./_components/Diary/Diary";
 import Dimmed from "./_components/Dimmed";
-import Share from "./_components/Share";
-import Main from "./_components/Main";
+import Share from "./_components/Share/Share";
+import Main from "./_components/Main/Main";
 
 import { initialDiaryData } from "./_data/initialData";
 import BottomTabNavigationBar from "../../_components/BottomTabNavigationBar";
@@ -36,11 +36,9 @@ export default function AlbumPage() {
         <div className="mb-24">
           <Diary
             diariesData={diariesData}
-            setDiariesData={setDiariesData}
             diaryIdx={diaryIdx}
             setDiaryIdx={setDiaryIdx}
             setShareDiaryData={setShareDiaryData}
-            captureData={captureData}
             setCaptureData={setCaptureData}
             isOpenShare={isOpenShare}
             setIsOpenShare={setIsOpenShare}

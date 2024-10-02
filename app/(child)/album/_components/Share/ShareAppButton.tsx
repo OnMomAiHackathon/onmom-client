@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import type { AppList } from "../../Types/AppList";
+import type { AppList } from "../../types/AppList";
 import base64ToBlob from "../../_utill/base64ToBlob";
-import { DiaryData } from "../../Types/DiaryData";
+import { DiaryData } from "../../types/DiaryData";
 import { toast } from "sonner";
 
 interface ShareAppButtons extends AppList {

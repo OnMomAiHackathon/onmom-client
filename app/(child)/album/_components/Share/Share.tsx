@@ -1,15 +1,15 @@
 "use client";
 
 import { SetStateAction, Dispatch, useState } from "react";
+import Script from "next/script";
 
-import type { AppList } from "../Types/AppList";
-import type { GroupMemberList } from "../Types/GroupMemberList";
-import type { DiaryData } from "../Types/DiaryData";
+import type { AppList } from "../../types/AppList";
+import type { GroupMemberList } from "../../types/GroupMemberList";
+import type { DiaryData } from "../../types/DiaryData";
 
 import CloseIcon from "@/public/icons/icon-close.svg";
-import ShareAppButton from "./Share/ShareAppButton";
-import ShareTargetCard from "./Share/ShareTargetCard";
-import Script from "next/script";
+import ShareAppButton from "./ShareAppButton";
+import ShareTargetCard from "./ShareTargetCard";
 
 interface ShareProps {
   isOpenShare: boolean;

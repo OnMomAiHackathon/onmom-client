@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import Frame from "@/public/icons/frame.svg";
 
-import type { DiaryData } from "../../Types/DiaryData";
+import type { DiaryData } from "../../types/DiaryData";
 
 type DiaryCardData = Pick<
   DiaryData,
